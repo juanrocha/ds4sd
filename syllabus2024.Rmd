@@ -1,0 +1,96 @@
+---
+title: "Data Science for Sustainable Development"
+subtitle: "PhD programme in Sustainability Science at the Stockholm Resilience Centre"
+author: "Juan C. Rocha, Örjan Bodin, Stefan Daume, Ingo Fetzer"
+date: "Autumn 2024 - Spring 2025"
+output:
+  pdf_document:
+    dev: pdf
+    keep_tex: no
+    toc: no
+    latex_engine: xelatex
+
+bibliography: references.bib
+csl: /Users/juanrocha/Documents/styles/nature.csl
+nocite: "@*"
+citecolor: blue
+linkcolor: blue
+---
+
+```{r}
+#| setup, include=FALSE
+knitr::opts_chunk$set(
+  comment = ''
+)
+```
+
+**Where**: SRC Meadows; Ostrom\
+**When:** 10.00-12.00 lectures and discussion \| 13.00-16.00 hands on exercises\
+**Requirements:** R (install from <https://cran.r-project.org>), RStudio (<https://posit.co/downloads/>[)\
+](#0)**Course materials**: <https://github.com/juanrocha/ds4sd>
+
+## Course overview
+
+This course provides an introduction to programming and data science for sustainability scientists.
+It focuses on R as a programming language, but the theory and core concepts can be applied to other languages such as Julia or Python.
+The course will be 10 days over 10 months, with one meeting per month.
+Each teaching day will have a morning lecture where we focus on the theory, and an afternoon seminar with practical exercises.
+Throughout the course we aim to give students the opportunity to improve their coding skills to achieve the goals of their own research projects, thus they are encouraged to bring their own data and problems to the classroom.
+While the course touches some statistical techniques (e.g. networks, topic models, machine learning), it does not offer an indepth coverage of these topics.
+We do offer however pointers to strenghten the statistical knowledge through optional readings.
+Our aim is to enable students to tackle complex programming tasks that can help them solve real world research problems.
+
+### Core concepts
+
+-   Programming languages, data types, functions, object oriented programming
+
+-   Visualization principles and story telling
+
+-   Reproducible research
+
+-   Resilience: early warning signals
+
+-   Machine learning
+
+### Learning objectives
+
+1.  Proficiency in data manipulation, cleaning, and analysis in R
+2.  Understanding and practice of reproducible research
+3.  A diverse vocabulary of scientific visualizations
+4.  Understanding how to apply network analysis in social-ecological datasets
+5.  Understanding what is resilience and how can it be assessed from qualitative and quantitative data
+6.  Understanding the basics of machine learning and best practices with supervised and unsupervised approaches
+7.  Developing skills on how to ask for help and how to help others in a programming tasks
+8.  Developing skills for sustainable learning: how to self-learn new programming skills or update old ones
+
+## Schedule
+
+```{r}
+#| echo = FALSE, message = FALSE, results="asis"
+
+library(tidyverse)
+library(knitr)
+library(kableExtra)
+tbl <- tibble(
+    Date = c("2024-09-13", "2024-10-11", "2024-11-15", "2024-12-06", "2025-01-10", "2025-02-14", "2025-03-14", "2025-04-11", "2025-05-09", "2025-06-13"),
+    Topic = c("R basics", "Data wrangling", "Reproducible workflows",  "Networks in SES", "Visualizations", "Resilience: time series and early warnings", "Resilience: Qualitavie Comparative Analysis", "ML: classification with topic modelling", "ML: prediction with random forest", "Project presentations"),
+    Lead = c("Juan", "Juan", "Stefan",  "Örjan", "Ingo", "Juan", "Juan", "Stefan", "Ingo", "Juan"),
+    Support = c("Ingo", "Stefan", "Juan", "Juan", "Stefan", "Ingo", "Örjan", "Juan", "Juan", "")
+)
+
+kbl(tbl, booktabs = TRUE, caption = 'Preliminary schedule') |> 
+    kable_styling(latex_options = c("striped", 'HOLD_position'), 
+                  full_width = TRUE) |> 
+    column_spec(1, width = "5em") |> column_spec(c(3,4), width = "4em") 
+```
+
+## Assessment criteria
+
+To pass the course you are expected to attend and participate in all activities, as well as present a individual research project at the end.
+The course is equivalent to two and a half weeks of full time work (4 credits).
+Because of the hands on nature of the course, all participation is in person (no zoom option available).
+
+## Literature
+
+All reading is optional material intended to help students gain proficiency on the tools introduced in each module of the course.
+Most of the resources are open access and available online.
